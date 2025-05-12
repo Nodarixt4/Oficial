@@ -39,9 +39,18 @@ async def receber_dados(dados: DadosSensor):
 
     # Interação com o Gemini
     model = genai.GenerativeModel("gemini-1.5-flash-latest")
-    response = model.generate_content(prompt)
-
-    return {
-        "status": "ok",
-        "insight": response.text.strip()
-    }
+    try:
+        response = model.generate_content(prompt)
+        insight = response.text.strip()
+        
+        # Log da resposta do Gemini
+        print(f"🌟 Resposta do Gemini: {insight}")
+        
+        return {
+            "status": "ok",
+            "insight": insight
+        }
+    
+    except Exception as e:
+        print(f"❌ Erro ao gerar resposta: {e}")
+        return {"status": "error", "message": "Erro ao gerar resposta"}
