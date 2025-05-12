@@ -38,7 +38,7 @@ async def receber_dados(dados: DadosSensor):
     """
 
     # Interação com o Gemini
-    model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("gemini-1.5-flash-latest")
     response = model.generate_content(prompt)
 
     return {
