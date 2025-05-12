@@ -21,6 +21,9 @@ class DadosSensor(BaseModel):
 
 @app.post("/api/dados")
 async def receber_dados(dados: DadosSensor):
+    # Log dos dados recebidos (para Render)
+    print(f"📡 Dados recebidos do ESP32: {dados}")
+
     # Formata a entrada
     prompt = f"""
     Dados recebidos de uma estação climática:
