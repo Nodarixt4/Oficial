@@ -57,7 +57,7 @@ async def receber_dados(dados: DadosSensor):
     Direção do vento: {dados.direcao_encoder}
     Posição do encoder: {dados.posicao_encoder}
 
-    Gere um insight interpretativo e claro para o usuário sobre o clima atual.
+    Gere um insight interpretativo e claro para o usuário sobre o clima atual. Ignore a posição do encoder.
     """
 
     # Gera resposta com Gemini
