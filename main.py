@@ -53,11 +53,11 @@ async def receber_dados(dados: DadosSensor):
     Temperatura: {dados.temperatura:.1f} °C
     Umidade: {dados.umidade:.1f} %
     Pressão: {dados.pressao:.2f} hPa
-    Velocidade do vento: {dados.frequencia_vento:.2f} 
+    Frequência do vento: {dados.frequencia_vento:.2f} Hz
     Direção do vento: {dados.direcao_encoder}
     Posição do encoder: {dados.posicao_encoder}
 
-    Gere um insight interpretativo e claro para o usuário sobre o clima atual. Ignore a posição do encoder.
+    Gere um insight interpretativo e claro para o usuário sobre o clima atual. Ignore a posição do encoder. Substitua Hz por km\h   
     """
 
     # Gera resposta com Gemini
