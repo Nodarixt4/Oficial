@@ -53,7 +53,7 @@ async def receber_dados(dados: DadosSensor):
     Temperatura: {dados.temperatura:.1f} °C
     Umidade: {dados.umidade:.1f} %
     Pressão: {dados.pressao:.2f} hPa
-    Frequência do vento: {dados.frequencia_vento:.2f} Hz
+    Velocidade do vento: {dados.frequencia_vento:.2f} 
     Direção do vento: {dados.direcao_encoder}
     Posição do encoder: {dados.posicao_encoder}
 
